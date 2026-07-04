@@ -1,0 +1,839 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <title>Odieli Faith Ifeoma - Portfolio</title>
+    <meta
+      name="description"
+      content="Odieli Faith Ifeoma - Frontend Developer Portfolio"
+    />
+
+    <!-- LINK TO FAVICON -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- LINK TO GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Raleway:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- LINK TO FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <!-- LINK TO TAILWIND CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              open: ["Open Sans", "sans-serif"],
+              poppins: ["Poppins", "sans-serif"],
+              raleway: ["Raleway", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- GENERAL STYLES -->
+    <style>
+      body {
+        font-family: "Open Sans", sans-serif;
+      }
+      .brand-gradient {
+        background: linear-gradient(90deg, #173e66, #010347, #190027, #330033);
+      }
+      .brand-gradient-rev {
+        background: linear-gradient(270deg, #29629c, #2a2e99, #2f0247, #6b016b);
+      }
+      #sidebar {
+        transition: transform 0.4s ease;
+      }
+      @media (max-width: 767px) {
+        #sidebar {
+          transform: translateX(-100%);
+        }
+        #sidebar.active {
+          transform: translateX(0);
+        }
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+
+  <body class="text-white">
+    <!-- MOBILE TOP BAR -->
+    <div
+      class="md:hidden fixed inset-x-0 top-0 z-[1500] flex h-16 items-center justify-between px-4 brand-gradient"
+    >
+      <span class="font-poppins text-lg font-semibold text-white"
+        >Odieli Faith Ifeoma</span
+      >
+      <button
+        id="menu-toggle"
+        aria-label="Toggle menu"
+        class="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white"
+      >
+        <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </div>
+
+    <!-- SIDE BAR / MOBILE MENU -->
+    <div
+      id="sidebar"
+      class="fixed left-0 top-16 z-[1400] h-screen w-full max-w-[300px] md:max-w-none md:w-[380px] overflow-y-auto brand-gradient px-6 pt-8 pb-6 text-center md:pt-10 md:top-0 md:left-0 md:h-screen md:w-[380px] md:overflow-y-auto md:px-10 md:pb-10 md:text-left"
+    >
+      <img
+        src="https://res.cloudinary.com/dgndtyq7s/image/upload/q_auto/f_auto/v1776176844/My_Crop_image_eakpjb.jpg"
+        alt="profile picture"
+        class="mx-auto mb-5 h-[150px] w-[150px] rounded-full border-8 border-[#bbb] object-cover object-top md:h-[180px] md:w-[180px]"
+      />
+
+      <a
+        href="#home"
+        class="font-poppins text-2xl font-semibold leading-tight text-white md:text-[32px]"
+      >
+        Odieli Faith Ifeoma
+      </a>
+
+      <div class="mt-4 flex items-center justify-center gap-3">
+        <a
+          href="https://x.com/faith_odieli?s=11"
+          target="_blank"
+          aria-label="Twitter"
+          class="flex h-11 w-11 items-center justify-center rounded-full text-white transition-colors duration-300 hover:bg-[#149ddd] brand-gradient-rev md:h-[55px] md:w-[55px]"
+        >
+          <i class="fab fa-twitter text-lg md:text-xl"></i>
+        </a>
+        <a
+          href="https://www.instagram.com/quin_ifeoma?igsh=OGU4a3Jsb2c3cTY0&utm_source=qr"
+          target="_blank"
+          aria-label="Instagram"
+          class="flex h-11 w-11 items-center justify-center rounded-full text-white transition-colors duration-300 hover:bg-[#149ddd] brand-gradient-rev md:h-[55px] md:w-[55px]"
+        >
+          <i class="fab fa-instagram text-lg md:text-xl"></i>
+        </a>
+        <a
+          href="https://www.facebook.com/share/1BF3bAJrFC/?mibextid=wwXIfr"
+          target="_blank"
+          aria-label="Facebook"
+          class="flex h-11 w-11 items-center justify-center rounded-full text-white transition-colors duration-300 hover:bg-[#149ddd] brand-gradient-rev md:h-[55px] md:w-[55px]"
+        >
+          <i class="fab fa-facebook-f text-lg md:text-xl"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/faithodieli"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+          class="flex h-11 w-11 items-center justify-center rounded-full text-white transition-colors duration-300 hover:bg-[#149ddd] brand-gradient-rev md:h-[55px] md:w-[55px]"
+        >
+          <i class="fab fa-linkedin-in text-lg md:text-xl"></i>
+        </a>
+        <a
+          href="https://github.com/Faith2Felix"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+          class="flex h-11 w-11 items-center justify-center rounded-full text-white transition-colors duration-300 hover:bg-[#149ddd] brand-gradient-rev md:h-[55px] md:w-[55px]"
+        >
+          <i class="fab fa-github text-lg md:text-xl"></i>
+        </a>
+      </div>
+
+      <ul class="mt-8 w-full text-left">
+        <!-- Home -->
+        <li class="py-3 md:py-5">
+          <a
+            href="#home"
+            class="menu-link flex items-center gap-4 font-poppins text-lg text-[#a8a9b4] transition-colors duration-300 hover:text-white md:text-xl"
+          >
+            <i
+              class="menu-icon fas fa-house text-xl text-[#6f7180] transition-all duration-300 group-hover:text-sky-400 md:text-2xl"
+            ></i
+            ><span>Home</span>
+          </a>
+        </li>
+
+        <!-- About -->
+        <li class="py-3 md:py-5">
+          <a
+            href="#about"
+            class="menu-link flex items-center gap-4 font-poppins text-lg text-[#a8a9b4] transition-colors duration-300 hover:text-white md:text-xl"
+          >
+            <i
+              class="menu-icon fas fa-user text-xl text-[#6f7180] transition-all duration-300 group-hover:text-sky-400 md:text-2xl"
+            ></i
+            ><span>About</span>
+          </a>
+        </li>
+        <!-- Resume -->
+        <li class="py-3 md:py-5">
+          <a
+            href="#resume"
+            class="menu-link flex items-center gap-4 font-poppins text-lg text-[#a8a9b4] transition-colors duration-300 hover:text-white md:text-xl"
+          >
+            <i
+              class="menu-icon fas fa-file-alt text-xl text-[#6f7180] transition-all duration-300 group-hover:text-sky-400 md:text-2xl"
+            ></i
+            ><span>Resume</span>
+          </a>
+        </li>
+
+        <!-- Portfolio -->
+        <li class="py-3 md:py-5">
+          <a
+            href="#portfolio"
+            class="menu-link flex items-center gap-4 font-poppins text-lg text-[#a8a9b4] transition-colors duration-300 hover:text-white md:text-xl"
+          >
+            <i
+              class="menu-icon fas fa-briefcase text-xl text-[#6f7180] transition-all duration-300 group-hover:text-sky-400 md:text-2xl"
+            ></i
+            ><span>Portfolio</span>
+          </a>
+        </li>
+
+        <!-- Contact -->
+        <li class="py-3 md:py-5">
+          <a
+            href="#contact"
+            class="menu-link flex items-center gap-4 font-poppins text-lg text-[#a8a9b4] transition-colors duration-300 hover:text-white md:text-xl"
+          >
+            <i
+              class="menu-icon fas fa-envelope text-xl text-[#6f7180] transition-all duration-300 group-hover:text-sky-400 md:text-2xl"
+            ></i
+            ><span>Contact</span>
+          </a>
+        </li>
+      </ul>
+
+      <p class="pb-2 pt-4 font-open text-sm text-white/80 md:text-base">
+        © Copyright <strong>2026</strong>
+      </p>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="pt-16 md:ml-[380px] md:w-[calc(100%-380px)] md:pt-0">
+      <!-- HERO -->
+      <section
+        id="home"
+        class="flex min-h-screen items-center bg-cover bg-center px-6 md:px-0"
+        style="
+          background-image: url(&quot;https://res.cloudinary.com/dgndtyq7s/image/upload/q_auto/f_auto/v1776176660/fotis-fotopoulos-LJ9KY8pIH3E-unsplash_grueq5.jpg&quot;);
+        "
+      >
+        <div class="w-full max-w-6xl md:pl-[50px]">
+          <h1
+            class="font-raleway text-5xl font-bold text-white drop-shadow-lg sm:text-6xl md:text-[100px] md:leading-[1.05]"
+          >
+            Odieli Faith Ifeoma
+          </h1>
+          <p class="mt-4 font-open text-xl text-white sm:text-2xl md:text-5xl">
+            I'm a Frontend Developer
+          </p>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section
+        id="about"
+        class="bg-white px-6 py-16 text-[#1f1e26] md:px-16 md:py-20"
+      >
+        <h1 class="font-raleway text-3xl font-bold text-[#173b6c] md:text-4xl">
+          About
+        </h1>
+        <div class="my-4 h-1 w-16 brand-gradient"></div>
+
+        <p class="max-w-4xl font-open text-base leading-relaxed md:text-2xl">
+          I'm a goal oriented individual with strong interpersonal, teamwork,and
+          communication skills. I have experience working with HTML, CSS and
+          JavaScript to deliver responsive websites and landing pages.
+        </p>
+
+        <div class="mt-10 flex flex-col items-start gap-8 lg:flex-row">
+          <img
+            src="https://res.cloudinary.com/dgndtyq7s/image/upload/q_auto/f_auto/v1776177270/IMG-20240626-WA0009_eooyfa.jpg"
+            alt="profile"
+            class="w-full max-w-[350px] object-cover object-bottom md:h-[60vh] md:w-[22vw] md:max-w-none"
+          />
+
+          <div class="flex-1">
+            <h1
+              class="font-raleway pt-6 text-2xl font-semibold text-[#173b6c] md:text-[35px]"
+            >
+              Web Developer ( Frontend )
+            </h1>
+            <p class="mt-6 mb-8 font-open italic md:text-2xl">
+              I am currently preparing to grow professionally and contribute to
+              meaningful projects.
+            </p>
+
+            <ul
+              class="mb-8 text-base md:text-xl mt-4 lg:mt-14 grid grid-cols-1 gap-5 lg:grid-cols-2 lg:gap-x-14 lg:gap-y-16"
+            >
+              <li class="flex items-start gap-5">
+                <i class="fa-regular fa-greater-than mt-1 text-[#98d4f0]"></i>
+                <span><strong>Phone:</strong> +234 8165395529</span>
+              </li>
+              <li class="flex items-start gap-5">
+                <i class="fa-regular fa-greater-than mt-1 text-[#98d4f0]"></i>
+                <span><strong>Email:</strong> faithfelix1998@gmail.com</span>
+              </li>
+              <li class="flex items-start gap-5">
+                <i class="fa-regular fa-greater-than mt-1 text-[#98d4f0]"></i>
+                <span><strong>City:</strong> Yaba, Lagos State.</span>
+              </li>
+            </ul>
+
+            <p class="font-open pt-12 leading-relaxed md:text-2xl">
+              A Web ( Frontend ) Developer from Lagos, Nigeria with a BSc in
+              Radiography from the University of Lagos. I am eager to work with
+              any respectable organization to build lasting relationships and
+              create responsive, user-friendly websites.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section
+        id="skills"
+        class="bg-[#f5f8fd] px-6 py-16 text-[#1f1e26] md:px-16 md:py-20"
+      >
+        <h1 class="font-raleway text-3xl font-bold text-[#173b6c] md:text-4xl">
+          Skills
+        </h1>
+        <div class="my-4 h-1 w-16 brand-gradient"></div>
+
+        <p
+          class="mb-12 max-w-4xl font-open leading-relaxed text-[#282d38] md:text-2xl"
+        >
+          The programming languages and technologies I am capable of working
+          with are listed below:
+          <br /><br />
+          JavaScript, which is used to add functionality and interaction to
+          websites.<br />
+          Cascading Style Sheets (CSS), which are used to design and style web
+          pages.<br />
+          Hypertext Markup Language (HTML), which is used to structure
+          websites.<br />
+          React, which is used to build interactive user interfaces and create
+          reusable website components.
+        </p>
+
+        <div class="grid grid-cols-1 gap-x-12 gap-y-2 md:grid-cols-2">
+          <div class="mb-8">
+            <div
+              class="mb-3 flex justify-between font-poppins text-lg font-bold text-[#101828] md:text-xl"
+            >
+              <span>HTML</span><span>90%</span>
+            </div>
+            <div class="h-3 w-full overflow-hidden bg-[#dbe5f5]">
+              <div class="h-full bg-[#149ddd]" style="width: 90%"></div>
+            </div>
+          </div>
+
+          <div class="mb-8">
+            <div
+              class="mb-3 flex justify-between font-poppins text-lg font-bold text-[#101828] md:text-xl"
+            >
+              <span>JAVASCRIPT</span><span>60%</span>
+            </div>
+            <div class="h-3 w-full overflow-hidden bg-[#dbe5f5]">
+              <div class="h-full bg-[#149ddd]" style="width: 60%"></div>
+            </div>
+          </div>
+
+          <div class="mb-8">
+            <div
+              class="mb-3 flex justify-between font-poppins text-lg font-bold text-[#101828] md:text-xl"
+            >
+              <span>CSS</span><span>80%</span>
+            </div>
+            <div class="h-3 w-full overflow-hidden bg-[#dbe5f5]">
+              <div class="h-full bg-[#149ddd]" style="width: 80%"></div>
+            </div>
+          </div>
+
+          <div class="mb-8">
+            <div
+              class="mb-3 flex justify-between font-poppins text-lg font-bold text-[#101828] md:text-xl"
+            >
+              <span>REACT</span><span>70%</span>
+            </div>
+            <div class="h-3 w-full overflow-hidden bg-[#dbe5f5]">
+              <div class="h-full bg-[#149ddd]" style="width: 70%"></div>
+            </div>
+          </div>
+
+          <div class="mb-8">
+            <div
+              class="mb-3 flex justify-between font-poppins text-lg font-bold text-[#101828] md:text-xl"
+            >
+              <span>TAILWIND</span><span>70%</span>
+            </div>
+            <div class="h-3 w-full overflow-hidden bg-[#dbe5f5]">
+              <div class="h-full bg-[#149ddd]" style="width: 70%"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RESUME -->
+      <section
+        id="resume"
+        class="bg-white px-6 py-16 text-[#4b4a4f] md:px-16 md:py-20"
+      >
+        <h1 class="font-raleway text-3xl font-bold text-[#173b6c] md:text-4xl">
+          Resume
+        </h1>
+        <div class="my-4 h-1 w-16 brand-gradient"></div>
+
+        <p class="mb-12 max-w-4xl font-open leading-relaxed md:text-2xl">
+          A Frontend developer with knowledge in web design and development of
+          user-centered responsive website pages from initial concept to
+          polished deliverable, imaginative and deadline-driven.
+        </p>
+
+        <div class="grid grid-cols-1 gap-10 lg:grid-cols-2 md:gap-20">
+          <div>
+            <h2
+              class="mb-6 font-raleway text-2xl font-semibold text-[#050d18] md:text-3xl"
+            >
+              Summary
+            </h2>
+
+            <div
+              class="relative mb-10 pl-10 before:absolute before:left-0 before:top-2 before:h-4 before:w-4 before:rounded-full before:border-[3px] before:border-[#1f5297] before:bg-white after:absolute after:left-[7px] after:top-6 after:h-full after:w-[3px] after:bg-[#1f5297]"
+            >
+              <h3
+                class="mb-2 font-poppins text-xl font-semibold text-[#050d18] md:text-2xl"
+              >
+                ODIELI FAITH IFEOMA
+              </h3>
+              <p class="mb-4 font-open italic">
+                Creative and detail-oriented Frontend Developer with experience
+                building responsive and interactive web applications. Passionate
+                about delivering seamless user experiences, writing clean code,
+                and continuously expanding technical expertise through hands-on
+                projects and learning.
+              </p>
+              <ul class="list-disc space-y-1 pl-6 font-open">
+                <li>
+                  github:
+                  <a
+                    href="https://github.com/Faith2Felix"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-[#149ddd] hover:underline"
+                    >Faith2Felix</a
+                  >
+                </li>
+                <li>
+                  linkedin:
+                  <a
+                    href="https://www.linkedin.com/in/faithodieli"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-[#149ddd] hover:underline"
+                    >odieli-faith</a
+                  >
+                </li>
+                <li>faithfelix1998@gmail.com</li>
+              </ul>
+            </div>
+
+            <div
+              class="relative mb-10 pl-10 before:absolute before:left-0 before:top-2 before:h-4 before:w-4 before:rounded-full before:border-[3px] before:border-[#1f5297] before:bg-white after:absolute after:left-[7px] after:top-6 after:h-full after:w-[3px] after:bg-[#1f5297]"
+            >
+              <h3
+                class="mb-2 font-poppins text-xl font-semibold text-[#050d18] md:text-2xl"
+              >
+                EXPERIENCE
+              </h3>
+              <div class="font-open">
+                <span
+                  class="mb-4 inline-block bg-[#e4edf9] px-5 py-1.5 font-semibold"
+                  >March 2026 - June 2026</span
+                >
+                <p class="italic">Techcrush Academy</p>
+                <p>Web Developer Trainee.</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h2
+              class="mb-6 font-raleway text-2xl font-semibold text-[#050d18] md:text-3xl"
+            >
+              Education
+            </h2>
+
+            <div
+              class="relative mb-10 pl-10 before:absolute before:left-0 before:top-2 before:h-4 before:w-4 before:rounded-full before:border-[3px] before:border-[#1f5297] before:bg-white after:absolute after:left-[7px] after:top-6 after:h-full after:w-[3px] after:bg-[#1f5297]"
+            >
+              <h3
+                class="mb-2 font-poppins text-xl font-semibold text-[#050d18] md:text-2xl"
+              >
+                BACHELOR OF SCIENCE IN RADIOGRAPHY
+              </h3>
+              <p class="mb-4 font-open italic">
+                College Of Medicine, University Of Lagos, Yaba, Lagos State,
+                Nigeria.
+              </p>
+              <p class="font-open">
+                In the Department of Radiography, Faculty of Health Professions,
+                I studied Medical Radiography. The program enhanced my
+                analytical thinking, communication, and collaboration skills
+                while exposing me to advanced technologies and practical
+                problem-solving in a fast-paced healthcare environment.
+              </p>
+            </div>
+
+            <div
+              class="relative mb-10 pl-10 before:absolute before:left-0 before:top-2 before:h-4 before:w-4 before:rounded-full before:border-[3px] before:border-[#1f5297] before:bg-white after:absolute after:left-[7px] after:top-6 after:h-full after:w-[3px] after:bg-[#1f5297]"
+            >
+              <h3
+                class="mb-2 font-poppins text-xl font-semibold text-[#050d18] md:text-2xl"
+              >
+                SECONDARY SCHOOL
+              </h3>
+              <p class="mb-4 font-open italic">Vera Grace College, Lagos.</p>
+              <p class="font-open">WAEC/SSCE Qualification</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PORTFOLIO -->
+      <section
+        id="portfolio"
+        class="bg-[#f5f8fd] px-6 py-16 text-[#1f1e26] md:px-16 md:py-20"
+      >
+        <h1 class="font-raleway text-3xl font-bold text-[#173b6c] md:text-4xl">
+          Portfolio
+        </h1>
+        <div class="my-4 h-1 w-16 brand-gradient"></div>
+
+        <p class="max-w-3xl font-open leading-relaxed md:text-2xl">
+          I'm currently putting together case studies of my recent frontend
+          projects. Check back soon, or reach out below to see samples of my
+          work directly.
+        </p>
+      </section>
+
+      <!-- CONTACT -->
+      <section
+        id="contact"
+        class="bg-white px-6 py-16 text-[#1f1e26] md:px-16 md:py-20"
+      >
+        <h1 class="font-raleway text-3xl font-bold text-[#173b6c] md:text-4xl">
+          Contact
+        </h1>
+        <div class="my-4 h-1 w-16 brand-gradient"></div>
+
+        <p class="mb-10 max-w-3xl font-open leading-relaxed md:text-2xl">
+          You can get in touch with me to discuss your ideas and projects. I'll
+          get back to you as soon as possible.
+        </p>
+
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+          <!-- INFO + MAP -->
+          <div class="rounded-xl border border-[#e4edf9] bg-[#f8fafc] p-6">
+            <div class="mb-6 flex items-start gap-4">
+              <span
+                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#d9edfb] text-[#149ddd]"
+              >
+                <i class="fas fa-location-dot"></i>
+              </span>
+              <div>
+                <h3 class="font-poppins text-lg font-semibold text-[#173b6c]">
+                  Location:
+                </h3>
+                <p class="font-open text-[#149ddd]">
+                  3, Funmilayo Anaronke street, Yaba, Lagos State.
+                </p>
+              </div>
+            </div>
+
+            <div class="mb-6 flex items-start gap-4">
+              <span
+                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#d9edfb] text-[#149ddd]"
+              >
+                <i class="fas fa-envelope"></i>
+              </span>
+              <div>
+                <h3 class="font-poppins text-lg font-semibold text-[#173b6c]">
+                  Email:
+                </h3>
+                <a
+                  href="mailto:faithfelix1998@gmail.com"
+                  class="font-open text-[#149ddd] hover:underline"
+                  >faithfelix1998@gmail.com</a
+                >
+              </div>
+            </div>
+
+            <div class="mb-6 flex items-start gap-4">
+              <span
+                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#d9edfb] text-[#149ddd]"
+              >
+                <i class="fas fa-phone"></i>
+              </span>
+              <div>
+                <h3 class="font-poppins text-lg font-semibold text-[#173b6c]">
+                  Phone No:
+                </h3>
+                <a
+                  href="tel:+2348165395529"
+                  class="font-open block text-[#149ddd] hover:underline"
+                  >+234 8165395529</a
+                >
+              </div>
+            </div>
+
+            <div class="relative overflow-hidden rounded-lg">
+              <iframe
+                title="Map showing Yaba, Lagos State"
+                src="https://www.google.com/maps?q=Yaba,+Lagos+State,+Nigeria&output=embed"
+                class="h-48 w-full border-0"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Yaba,+Lagos+State,+Nigeria"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="absolute left-3 top-3 flex items-center gap-2 rounded-md bg-white px-3 py-2 text-sm font-semibold text-[#149ddd] shadow hover:bg-[#f0f8ff]"
+              >
+                Open in Maps
+                <i class="fas fa-arrow-up-right-from-square text-xs"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- FORM -->
+          <form
+            id="contact-form"
+            class="rounded-xl border border-[#e4edf9] bg-[#f8fafc] p-6"
+          >
+            <input
+              type="hidden"
+              name="access_key"
+              value="65906f37-1c68-41ed-b6c1-e2418840ade1"
+            />
+            <input
+              type="hidden"
+              name="from_name"
+              value="Portfolio Contact Form"
+            />
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <div>
+                <label
+                  for="cf-name"
+                  class="mb-2 block font-poppins text-sm font-semibold text-[#173b6c]"
+                  >Your Name</label
+                >
+                <input
+                  id="cf-name"
+                  name="name"
+                  type="text"
+                  required
+                  class="w-full rounded-md border border-[#cdd9ea] bg-white px-3 py-2 font-open text-[#1f1e26] focus:border-[#149ddd] focus:outline-none"
+                />
+              </div>
+              <div>
+                <label
+                  for="cf-email"
+                  class="mb-2 block font-poppins text-sm font-semibold text-[#173b6c]"
+                  >Your Email</label
+                >
+                <input
+                  id="cf-email"
+                  name="email"
+                  type="email"
+                  required
+                  class="w-full rounded-md border border-[#cdd9ea] bg-white px-3 py-2 font-open text-[#1f1e26] focus:border-[#149ddd] focus:outline-none"
+                />
+              </div>
+            </div>
+
+            <div class="mt-4">
+              <label
+                for="cf-subject"
+                class="mb-2 block font-poppins text-sm font-semibold text-[#173b6c]"
+                >Subject</label
+              >
+              <input
+                id="cf-subject"
+                name="subject"
+                type="text"
+                class="w-full rounded-md border border-[#cdd9ea] bg-white px-3 py-2 font-open text-[#1f1e26] focus:border-[#149ddd] focus:outline-none"
+              />
+            </div>
+
+            <div class="mt-4">
+              <label
+                for="cf-message"
+                class="mb-2 block font-poppins text-sm font-semibold text-[#173b6c]"
+                >Message</label
+              >
+              <textarea
+                id="cf-message"
+                name="message"
+                rows="5"
+                required
+                class="w-full rounded-md border border-[#cdd9ea] bg-white px-3 py-2 font-open text-[#1f1e26] focus:border-[#149ddd] focus:outline-none"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              id="cf-submit"
+              class="mt-6 rounded-md px-8 py-3 font-poppins font-semibold text-white transition-opacity duration-300 hover:opacity-90 brand-gradient"
+            >
+              Send Message
+            </button>
+
+            <p id="cf-status" class="mt-4 font-open text-sm"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- SCROLL TO TOP -->
+    <a
+      href="#home"
+      id="scroll-top"
+      aria-label="Back to top"
+      class="fixed bottom-6 right-6 z-[1600] flex h-14 w-14 items-center justify-center rounded-full text-white opacity-0 shadow-lg transition-opacity duration-300 brand-gradient"
+    >
+      <i class="fas fa-arrow-up text-xl"></i>
+    </a>
+
+    <!--==========================================================
+            LINK TO JAVASCRIPT
+        ======================================================== -->
+    <script>
+      const menuBtn = document.getElementById("menu-toggle");
+      const sidebar = document.getElementById("sidebar");
+      const menuIcon = document.getElementById("menu-icon");
+      const menuLinks = document.querySelectorAll(".menu-link");
+
+      function closeMenu() {
+        sidebar.classList.remove("active");
+        menuIcon.classList.remove("fa-xmark");
+        menuIcon.classList.add("fa-bars");
+      }
+
+      menuBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("active");
+        if (sidebar.classList.contains("active")) {
+          menuIcon.classList.remove("fa-bars");
+          menuIcon.classList.add("fa-xmark");
+        } else {
+          menuIcon.classList.remove("fa-xmark");
+          menuIcon.classList.add("fa-bars");
+        }
+      });
+
+      menuLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          // Reset all links
+          menuLinks.forEach((item) => {
+            item.classList.remove("text-white");
+            item.classList.add("text-[#a8a9b4]");
+
+            item.querySelector(".menu-icon").classList.remove("text-sky-400");
+            item.querySelector(".menu-icon").classList.add("text-[#6f7180]");
+          });
+
+          // Activate clicked link
+          link.classList.remove("text-[#a8a9b4]");
+          link.classList.add("text-white");
+
+          link.querySelector(".menu-icon").classList.remove("text-[#6f7180]");
+          link.querySelector(".menu-icon").classList.add("text-sky-400");
+
+          if (window.innerWidth < 768) {
+            closeMenu();
+          }
+        });
+      });
+
+      const scrollTopBtn = document.getElementById("scroll-top");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 400) {
+          scrollTopBtn.classList.remove("opacity-0");
+          scrollTopBtn.classList.add("opacity-100");
+        } else {
+          scrollTopBtn.classList.remove("opacity-100");
+          scrollTopBtn.classList.add("opacity-0");
+        }
+      });
+
+      const contactForm = document.getElementById("contact-form");
+      const contactStatus = document.getElementById("cf-status");
+      const contactSubmit = document.getElementById("cf-submit");
+
+      contactForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById("cf-name").value.trim();
+        const email = document.getElementById("cf-email").value.trim();
+        const message = document.getElementById("cf-message").value.trim();
+
+        if (!name || !email || !message) {
+          contactStatus.textContent =
+            "Please fill in your name, email, and message.";
+          contactStatus.className = "mt-4 font-open text-sm text-red-600";
+          return;
+        }
+
+        contactSubmit.disabled = true;
+        contactSubmit.textContent = "Sending...";
+        contactStatus.textContent = "";
+        try {
+          const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+            body: JSON.stringify(Object.fromEntries(new FormData(contactForm))),
+          });
+
+          const data = await response.json();
+
+          if (response.ok && data.success) {
+            contactStatus.textContent =
+              "Thank you! Your message has been sent.";
+            contactStatus.className = "mt-4 font-open text-sm text-green-600";
+            contactForm.reset();
+          } else {
+            contactStatus.textContent =
+              data.message || "Something went wrong. Please try again.";
+            contactStatus.className = "mt-4 font-open text-sm text-red-600";
+          }
+        } catch (err) {
+          contactStatus.textContent =
+            "Could not send message. Please check your connection and try again.";
+          contactStatus.className = "mt-4 font-open text-sm text-red-600";
+        } finally {
+          contactSubmit.disabled = false;
+          contactSubmit.textContent = "Send Message";
+        }
+      });
+    </script>
+  </body>
+</html>
